@@ -5,7 +5,6 @@ export default class Services extends Component {
   render() {
     return (
       <View>
-        <Text style={styles.title} >Our Services</Text>
         <Button onPress={() => this.props.navigation.navigate('Maintenance')} title="Maintenance"/>
         <Button onPress={() => this.props.navigation.navigate('Irrigation')} title="Irrigation"/>
         <Button onPress={() => this.props.navigation.navigate('Enhancements')} title="Enhancements"/>

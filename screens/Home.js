@@ -9,11 +9,14 @@ export default class Home extends Component {
       <View style={styles.container}>
         <Image source={Image1} style={styles.image1} />
         <View>
-        <View>
-        <Button onPress={() => this.props.navigation.navigate('Services')} title="Services"/>
-        </View>
-        <Button onPress={() => this.props.navigation.navigate('ContactUs')} title="Contact Us"/>
-        <Button onPress={() => this.props.navigation.navigate('Settings')} title="⚙"/>
+          <View>
+            <Button onPress={() => this.props.navigation.navigate('Services')} title="Services"/>
+          </View>
+          <View>
+            <Button onPress={() => this.props.navigation.navigate('GetAQuote')} title="Get A Quote"/>
+          </View>
+          <Button onPress={() => this.props.navigation.navigate('ContactUs')} title="Contact Us"/>
+          <Button onPress={() => this.props.navigation.navigate('Settings')} title="⚙"/>
         </View>
       </View>
     );
@@ -29,6 +32,15 @@ const styles = StyleSheet.create({
   image1: {
     width: 500,
     height: 300,
+  },
+  main: {
+    margin: 10,
+    borderColor: 'black',
+    borderWidth: 1
+  },
+  cardOne: {
+    borderWidth: 1,
+    borderColor: 'red'
   },
   title: {
     fontSize: 18,
