@@ -1,4 +1,4 @@
-# Hayne's Landscaping & Irigation Mobile App
+# Hayne's Landscaping & Irrigation Mobile App
 
 **Learning React-Native**
 
