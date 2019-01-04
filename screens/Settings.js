@@ -1,9 +1,10 @@
 // Settings.js
 
 import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, Alert } from 'react-native';
 
 export class Settings extends Component {
+
   render() {
     return (
       <View>

@@ -34,18 +34,19 @@ const AppNavigator = createStackNavigator({
   Enhancements: {screen: Enhancements},
   ContactUs: {screen: ContactUs},
   Settings: {screen: Settings},
-  GetAQuote: {screen: GetAQuote }
+  GetAQuote: {
+    screen: GetAQuote,
+    navigationOptions: () => ({
+      title: 'Your Quote'
+    })
+  }
 });
 
 
 
 const AppContainer = createAppContainer(AppNavigator)
 
-
 export default class App extends Component {
-  static navigationOptions = {
-    title: 'BLAH'
-  }
 
   render() {
     return (

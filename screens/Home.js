@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Image, Button } from 'react-native';
+import { Text, View, StyleSheet, Image, Button, Alert } from 'react-native';
 
 import Image1 from '../images/landscape-architect.png';
 
 export default class Home extends Component {
+
   render() {
+
     return (
+      
       <View style={styles.container}>
         <Image source={Image1} style={styles.image1} />
         <View>
