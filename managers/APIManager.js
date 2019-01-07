@@ -16,15 +16,17 @@ const APIManager = Object.create(null, {
 
   postAQuote: {
     value: (url, requestObj) => {
-      return fetch(`${url}quotes`, {
+      return fetch(`${url}`, {
         method: 'POST',
-        headers: {
-          'content-type': 'application/json'
-        },
-        body: requestObj.toString()
+        body: JSON.stringify( requestObj ),
+        headers: new Headers ({
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        })
       })
-      .catch(error => error)
-
+      .then(res => res.json())
+      .catch(err => console.warn('ERR', err))
+      .then(response => console.warn('success:', response))
     }
   }
 })

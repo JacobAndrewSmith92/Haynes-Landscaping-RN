@@ -25,10 +25,8 @@ export default class GetAQuote extends Component {
   }
 
 
-
-
   submitQuoteForm = () => {
-    const url = 'http:localhost:3000/'
+    const url = 'http:localhost:3000/quotes/'
     // const emailError = validation('email', this.state.email)
     const { name, company, address, phone, email } = this.state;
     const collection = {
@@ -38,16 +36,12 @@ export default class GetAQuote extends Component {
       phone,
       email
     };
-
-    const stringifiedBody = JSON.stringify(collection);
-
-    
-
     APIManager.postAQuote(url, collection)
-      .then(response => Alert.alert('YAY'))
-      .catch(err => Alert.alert('ERR'))
-    Alert.alert(`Thanks ${collection.full_name}! A representative will be in touch shortly.`)
-    this.props.navigation.navigate('Settings')
+    .then(res => res.json())
+    .catch(err => console.warn('ERR'))
+    .then(response => console.warn('success'))
+    // Alert.alert(`Thanks ${collection.full_name}! A representative will be in touch shortly.`)
+    // this.props.navigation.navigate('Settings')
   }
 
 
