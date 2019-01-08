@@ -24,9 +24,6 @@ const APIManager = Object.create(null, {
           'Content-Type': 'application/json'
         })
       })
-      .then(res => res.json())
-      .catch(err => console.warn('ERR', err))
-      .then(response => console.warn('success:', response))
     }
   }
 })
