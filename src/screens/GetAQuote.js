@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, Button, StyleSheet, TextInput, TouchableOpacity, Alert } from 'react-native';
-import { Button as Button2 } from 'react-native-elements';
+import { Button as RNEButton } from 'react-native-elements';
 
 import APIManager from '../managers/APIManager';
 
@@ -57,7 +57,7 @@ export default class GetAQuote extends Component {
         <TextInput style={styles.inputField} textContentType={'emailAddress'} placeholder='Email' onChangeText={(text) => this.handlingInputToState(text, 'email')}
           />
         <TouchableOpacity>
-          <Button2 title='Submit' onPress={() => this.submitQuoteForm()} />
+          <RNEButton title='Submit' onPress={() => this.submitQuoteForm()} />
         </TouchableOpacity>
         <Button onPress={() => this.props.navigation.navigate('Services')} title='🏠'/>
       </View>
