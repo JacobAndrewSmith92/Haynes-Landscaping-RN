@@ -16,6 +16,9 @@ export default class Home extends Component {
             <Button onPress={() => this.props.navigation.navigate('Services')} title="Services"/>
           </View>
           <View>
+            <Button onPress={() => this.props.navigation.navigate('Portfolio')} title="Portfolio"/>
+          </View>
+          <View>
             <Button onPress={() => this.props.navigation.navigate('GetAQuote')} title="Get A Quote"/>
           </View>
           <Button onPress={() => this.props.navigation.navigate('ContactUs')} title="Contact Us"/>

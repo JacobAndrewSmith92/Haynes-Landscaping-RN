@@ -5,6 +5,7 @@ import {createStackNavigator, createSwitchNavigator, createAppContainer } from '
 
 // component imports
 import Home from '../screens/Home';
+import Portfolio from '../screens/portfolio/Portfolio';
 import Services from '../screens/services/Services';
 import Maintenance from '../screens/services/MaintenanceServices';
 import Irrigation from '../screens/services/IrrigationServices';
@@ -18,7 +19,7 @@ const AppStack = createStackNavigator({
   Home: {
     screen: Home,
     navigationOptions: ({ navigation }) => ({
-      title: `Hayne's Landscaping & Irrigation`,
+      title: `HAYNE'S 🌻`,
       headerStyle: {
         backgroundColor: 'pink',
       },
@@ -42,6 +43,13 @@ const AppStack = createStackNavigator({
     screen: GetAQuote,
     navigationOptions: () => ({
       title: 'Your Quote'
+    })
+  },
+  Portfolio: {
+    screen: Portfolio,
+    navigationOptions: () => ({
+      title: 'Our Portfolio',
+      headerLeft: null
     })
   }
 });

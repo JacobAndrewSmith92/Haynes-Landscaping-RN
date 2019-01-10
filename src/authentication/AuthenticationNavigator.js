@@ -11,7 +11,8 @@ const AuthenticationNavigator = createStackNavigator({
     screen: SignIn,
     navigationOptions: () => ({
       headerStyle: {
-        backgroundColor: '#146C00'
+        // backgroundColor: '#146C00'
+        backgroundColor: 'pink'
       }
     })
   },
